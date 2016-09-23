@@ -1,0 +1,143 @@
+	
+<script src="js/chart.min.js"></script>
+
+<div class="container">
+	<div class="tablero col-md-12 col-lg-12 col-xs-12 col-sm-12">
+		<section class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+			<div class="panel panel-default">
+                <div class="panel-body">
+                	Datos estadísticos 
+            	</div>
+                <div class="eat-panel-footer panel-footer">
+                    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                        
+						<div class="ea-d1 col-md-4 col-lg-4 col-xs-4 col-sm-4">
+							<span class="span1">2200</span>
+							<span class="span2">Taxistas Matriculados</span>
+	                    </div>
+	                    <div class="ea-d2 col-md-4 col-lg-4 col-xs-4 col-sm-4">
+							<span class="span1">600</span>
+							<span class="span2">Conductores con seguridad social</span>
+	                    </div>
+	                    <div class="ea-d3 col-md-4 col-lg-4 col-xs-4 col-sm-4">
+							<span class="span1">1400</span>
+							<span class="span2">Taxis con información al dia</span>
+	                    </div>
+
+                    </div>
+                </div>
+            </div>
+		</section>
+		<section class="ea-section col-md-6 col-lg-6 col-xs-6 col-sm-6">
+			<div>
+				<div class="panel panel-default">
+	                <div class="panel-body">
+	                	Taxis matriculados * empresa
+	            	</div>
+	                <div class="eat-panel-footer2 panel-footer">
+	                    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+	                        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+							<div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+								<div class="ea-inpta input-group">
+								  <span class="input-group-addon" id="basic-addon3">Asotaxis</span>
+								  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="200" disabled>
+								</div>
+								<div class="ea-inpta input-group">
+								  <span class="input-group-addon" id="basic-addon3">Taxipro 2000</span>
+								  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="800" disabled>
+								</div>
+								<div class="ea-inpta input-group">
+								  <span class="input-group-addon" id="basic-addon3">Protaxi</span>
+								  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="500" disabled>
+								</div>
+							</div>
+	                    	<div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+								<div class="ea-inpta input-group">
+								  <span class="input-group-addon" id="basic-addon3">Super Taxi</span>
+								  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="200" disabled>
+								</div>
+								<div class="ea-inpta input-group">
+								  <span class="input-group-addon" id="basic-addon3">Taxism</span>
+								  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="400" disabled>
+								</div>
+								<div class="ea-inpta input-group">
+								  <span class="input-group-addon" id="basic-addon3">Taxi Santa Marta</span>
+								  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="100" disabled>
+								</div>
+							</div>
+	                    </div>
+	                    </div>
+	                </div>
+	            </div>
+			</div>
+			<div>
+				<div class="panel panel-default">
+	                <div class="panel-body">
+	                	Empresas con información al dia
+	            	</div>
+	                <div class="eat-panel-footer3 panel-footer">
+	                    <div class="ea-d1 col-md-6 col-lg-6 col-xs-6 col-sm-6">
+							<span class="span1">6</span>
+							<span class="span2">Empresas</span>
+	                    </div>
+	                    <div class="ea-d2 col-md-6 col-lg-6 col-xs-6 col-sm-6">
+							<span class="span1">2200</span>
+							<span class="span2">Taxistas Matriculados</span>
+	                    </div>
+	                </div>
+	            </div>
+			</div>
+		</section>
+		<section class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+			<div class="panel panel-default">
+	                <div class="panel-body">
+	                	Conductores con infracciones 
+	            	</div>
+	                <div class="eat-panel-footer4 panel-footer">
+	                    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+	                       <canvas id="myChart" width="400" height="250"></canvas>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto"],
+        datasets: [{
+            label: '# de infracciones',
+            data: [100, 190, 130, 80, 90, 50],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+	                    </div>
+	                </div>
+	            </div>
+		</section>
+	</div>
+</div>
